@@ -1,0 +1,324 @@
+/* Global reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Link styles */
+a {
+    font-size: 22px;
+    font-family: 'Arial', sans-serif;
+    transition: all 0.5s;
+    color: #F28C28;
+    text-decoration: none;
+}
+
+/* Paragraph styles */
+p {
+    text-transform: capitalize;
+    padding: 10px 0;
+    font-size: 14px;
+    color: gray;
+}
+
+/* Hover for links */
+a:hover {
+    color: #e07b1f;
+}
+
+/* Heading styles */
+h1 {
+    color: black;
+    font-size: 40px;
+}
+h2 {
+    color: #F28C28;
+    font-size: 24px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Span styles */
+span {
+    color: #F28C28;
+    font-size: 32px;
+}
+
+/* Navigation bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 6rem;
+    padding: 10px;
+    background-color: black;
+    position: relative;
+}
+
+/* Logo */
+.logo img {
+    width: 15rem;
+    max-width: 100%;
+}
+
+/* Navbar links (desktop) */
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+}
+
+/* Hamburger menu icon */
+.menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+}
+.menu span {
+    width: 100%;
+    height: 3px;
+    background-color: #F28C28;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+.menu.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.menu.active span:nth-child(2) {
+    opacity: 0;
+}
+.menu.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Sections */
+.section-1, .section-2 {
+    margin: 20px;
+    position: relative; /* Allows absolute positioning within */
+}
+
+/* Items container */
+.items {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Individual item */
+.item {
+  
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Title within items */
+.items .title {
+    width: 100%;
+    max-width: 30rem;
+    text-align: center;
+}
+
+/* Images */
+.items .item .images {
+    width: 100%;
+    height: auto;
+}
+.items .item .images img {
+    width: 100%;
+    max-width: 900px;
+    height: 30rem;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Button */
+.btn {
+    background-color: #F28C28;
+    padding: 5px 12px;
+    border-radius: 15px;
+    margin: 10px 0;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #e07b1f;
+}
+.btn a {
+    color: white;
+}
+
+/* Item title layout */
+.item-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.item-title h1 {
+    width: 100%;
+    max-width: 25rem;
+}
+.item-title .item-box p {
+    width: 100%;
+    max-width: 25rem;
+}
+
+/* Updated styles for .item-Fruits section with absolute positioning and enhanced design */
+.itemss {
+    position: relative; /* Parent for absolute positioning */
+}
+
+.item-Fruits {
+    position: absolute; /* Absolute positioning relative to .itemss */
+    top: 100px; /* Adjust as needed (e.g., below the title) */
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 50%, #e0e0e0 100%); /* Enhanced gradient for depth */
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for the section */
+    z-index: 10; /* Ensures it layers above other content if needed */
+}
+
+.item-image {
+    background-color: white;
+    border-radius: 15px; /* More rounded for modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Deeper shadow */
+    overflow: hidden;
+    width: calc(25% - 20px); /* 4 items per row on desktop */
+    min-width: 200px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease; /* Smoother animations */
+    text-align: center;
+    border: 2px solid transparent; /* For hover border effect */
+}
+
+.item-image:hover {
+    transform: scale(1.05) translateY(-5px); /* Scale and lift */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* Glow effect */
+    filter: brightness(1.1); /* Slight brightness increase */
+    border-color: #F28C28; /* Orange border on hover */
+}
+
+.item-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid #F28C28; /* Thicker orange accent */
+    transition: opacity 0.3s ease;
+}
+
+.item-image:hover img {
+    position: relative;
+    opacity: 0.9; /* Subtle fade on hover */
+}
+
+.item-image .item-box {
+    padding: 15px; /* More padding */
+}
+
+.item-image a {
+    display: block; /* Makes the whole card clickable if linked */
+    text-decoration: none;
+}
+
+.item-image a:hover h2 {
+    text-decoration: underline; /* Underline on hover for linked items */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    /* Nav adjustments */
+    nav {
+        padding: 10px 20px;
+    }
+    .logo img {
+        width: 10rem;
+    }
+    .navbar-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background-color: black;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 100px;
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+    .navbar-links.active {
+        right: 0;
+    }
+    .navbar-links li {
+        margin: 20px 0;
+        text-align: center;
+    }
+    .navbar-links a {
+        font-size: 18px;
+    }
+    
+    /* Show hamburger */
+    .menu {
+        display: flex;
+    }
+    
+    /* Adjust sections and items for mobile */
+    .section-1, .section-2 {
+        margin: 10px;
+    }
+    .items .title {
+        max-width: 100%;
+    }
+    .items .item .images img {
+        height: auto;
+    }
+    .item-title {
+        flex-direction: column;
+        text-align: center;
+    }
+    .item-title h1, .item-title .item-box p {
+        max-width: 100%;
+    }
+    
+    /* Mobile adjustments for .item-Fruits (switch to relative if absolute causes issues) */
+    .item-Fruits {
+        position: relative; /* Switch to relative on mobile for better flow */
+        top: auto;
+        left: auto;
+        right: auto;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        margin-top: 20px; /* Space below title */
+    }
+    .item-image {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    /* Tablet: 2 items per row */
+    .item-image {
+        width: calc(50% - 20px);
+    }
+}

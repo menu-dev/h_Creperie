@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <img src="./img/logo.png" alt="Logo">
+            </div>
+            <ul class="flex navbar-links"> 
+                <li><a href="">Home</a></li>
+                <li><a href="">Product</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+            <div class="menu" id="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </div>
+
+    <main>
+        <section class="section-1">
+            <div class="items">
+                <div class="title">
+                    <h1><span>Flip N' Slip All-Time</span> The Best Crep Recipes To <span>Savor</span></h1>
+                    <p>Explore Flip N' Slip all-time best crepe recipes packed with flavor, perfect for family meals and special occasions</p>
+                    <button class="btn"><a href="">SEE ALL</a></button>
+                </div>
+                <div class="item">
+                    <div class="images">
+                        <img src="./img/img1.jpeg" alt="Crepe image">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-2">
+            <div class="itemss"> <!-- Changed from .itemss to .items for consistency -->
+                <div class="item-title">
+                    <h1>Crave-Worthy Dishes You'll Love</h1>
+                    <div class="item-box">
+                        <p>Discover crave-worthy dishes you'll love—easy to make, full of flavor, and always satisfying.</p>
+                    </div>
+                </div>
+
+
+                <div class="item-Fruits">
+                    <div class="item-image">
+                     <a href="About.html">   <img src="./img/img6.jpeg" alt=""></a>
+                        <div class="item-box">
+<h2>Crep</h2>
+                        </div>
+                    </div>
+                    <div class="item-image">
+                        <img src="./img/img5.jpeg" alt="">
+                        <div class="item-box">
+<h2>Wafles</h2>
+                        </div>
+                    </div>
+                    <div class="item-image">
+                        <img src="./img/img7.jpeg" alt="">
+                        <div class="item-box">
+<h2>Panacake</h2>
+                        </div>
+                    </div>
+                    <div class="item-image">
+                        <img src="./img/img3.jpeg" alt="">
+                        <div class="item-box">
+<h2>Juice</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Simple JS for menu toggle -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navbarLinks = document.querySelector('.navbar-links');
+        
+        menuToggle.addEventListener('click', () => {
+            navbarLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active'); // For animation
+        });
+    </script>
+</body>
+</html>
