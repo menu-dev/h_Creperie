@@ -62,7 +62,9 @@ span {
     color: #F28C28;
     font-size: 32px;
 }
-
+h1 , h3{
+    text-transform: uppercase;
+}
 /* Navigation bar */
 nav {
     display: flex;
@@ -331,11 +333,10 @@ nav {
     justify-content: space-between;
   
     border: none;
-     background-color: #fff; /* Adjust as needed */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
 
     border-radius: 5px;
-    padding: 5px;
+    padding: 20px;
     margin: 10px;
 
 
